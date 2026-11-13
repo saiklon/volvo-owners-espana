@@ -65,3 +65,10 @@ No existe una URL administrativa pública independiente: el panel solo se muestr
 ## Marca
 
 Volvo Owners España es un proyecto independiente, no afiliado, patrocinado ni respaldado por Volvo Cars. No utiliza el logotipo oficial.
+
+
+## Alta de socio con presentación obligatoria del Volvo
+
+El formulario de registro solicita en un único proceso los datos personales y la ficha del primer vehículo. Para crear la cuenta es obligatorio indicar modelo y año, escribir una historia de al menos 30 caracteres, adjuntar una fotografía JPG/PNG/WEBP de hasta 8 MB y aceptar las declaraciones de propiedad/autorización y publicación dentro del club.
+
+Si Supabase exige confirmar el correo antes de crear una sesión, la ficha y el archivo fotográfico se conservan temporalmente en IndexedDB en el mismo navegador. Tras confirmar el correo y volver a iniciar sesión desde ese navegador, la web sube la fotografía al bucket privado vehicle-photos y crea el vehículo con estado pending. Si el alta devuelve una sesión inmediatamente, la ficha se guarda en ese momento. El usuario no obtiene acceso de socio hasta que administración aprueba el vehículo.
