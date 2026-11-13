@@ -1,0 +1,1 @@
+// Copia como config.js y añade la URL y clave anon/publishable de Supabase.\n// Nunca incluyas la service_role key en el frontend.\nwindow.VOE_CONFIG={url:"https://TU-PROYECTO.supabase.co",anonKey:"TU_CLAVE_ANON_O_PUBLISHABLE"};
