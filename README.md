@@ -25,8 +25,8 @@ https://saiklon.github.io/volvo-owners-espana/
    - `https://saiklon.github.io/volvo-owners-espana/socios.html`
    - `https://saiklon.github.io/volvo-owners-espana/*`
 4. En **Project Settings → API**, copia la Project URL y la clave pública anon/publishable.
-5. Crea localmente un archivo llamado `config.js` a partir de `config.example.js` y sustituye los valores de ejemplo por los de tu proyecto.
-6. Publica `config.js` en la raíz del sitio mediante un mecanismo de despliegue privado/seguro. **No lo subas al repositorio**: está excluido por `.gitignore`. En GitHub Pages, que sirve archivos desde el repositorio, este archivo no puede permanecer oculto si se publica. La clave anon/publishable está diseñada para el navegador y solo es segura con RLS correctamente configurada; nunca pongas aquí la service_role.
+5. Crea localmente `config.js` a partir de `config.example.js` y sustituye la URL y la clave pública anon/publishable.
+6. Para GitHub Pages, publica ese `config.js` en la raíz del sitio. Como está excluido por `.gitignore`, tendrás que añadirlo explícitamente con `git add -f config.js` antes de hacer commit. La URL y la clave anon/publishable son públicas por diseño; la seguridad depende de RLS y de las políticas de Storage. **Nunca incluyas la clave service_role**.
 7. Comprueba que el bucket privado `vehicle-photos` se ha creado al ejecutar el SQL y que las políticas RLS aparecen activas.
 
 ### Importante sobre GitHub Pages y config.js
