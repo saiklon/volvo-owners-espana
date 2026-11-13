@@ -103,7 +103,7 @@ drop policy if exists "approved club members view approved photos" on storage.ob
 create policy "upload own vehicle photo" on storage.objects for insert to authenticated with check(bucket_id='vehicle-photos' and (storage.foldername(name))[1]=auth.uid()::text);
 create policy "read own or admin vehicle photo" on storage.objects for select to authenticated using(bucket_id='vehicle-photos' and ((storage.foldername(name))[1]=auth.uid()::text or public.is_admin()));
 create policy "approved club members view approved photos" on storage.objects for select to authenticated using(bucket_id='vehicle-photos' and exists(
- select 1 from public.vehicles v join public.profiles owner_profile on owner_profile.id=v.owner_id
+ select 1 from public.vehicles v
  join public.profiles viewer on viewer.id=auth.uid()
  where v.photo_path=name and v.verification_status='approved' and viewer.membership_status='approved'
 ));
